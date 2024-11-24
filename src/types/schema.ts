@@ -1,3 +1,5 @@
+// src/types/schema.ts
+
 export type FieldType = 'text' | 'email' | 'select' | 'radio' | 'textarea';
 
 export interface FieldOption {
@@ -24,4 +26,8 @@ export interface FormSchema {
   formTitle: string;
   formDescription: string;
   fields: FormField[];
+}
+
+export interface FormData {
+  [key: string]: string;
 }

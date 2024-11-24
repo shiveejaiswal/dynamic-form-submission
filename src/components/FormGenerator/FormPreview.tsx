@@ -5,7 +5,7 @@ import TextField from './FormFields/TextField';
 import EmailField from './FormFields/EmailField';
 import SelectField from './FormFields/SelectField';
 import RadioField from './FormFields/RadioField';
-import TextareaField from './FormFields/TestAreaField';
+import TextareaField from './FormFields/TextAreaField';
 
 interface FormPreviewProps {
   schema: FormSchema;

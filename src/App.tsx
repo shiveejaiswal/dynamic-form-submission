@@ -1,26 +1,32 @@
-import React from 'react';
+// src/App.tsx
+
+import React, { useState } from 'react';
 import FormGenerator from './components/FormGenerator';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
+  const [jsonSchema, setJsonSchema] = useState<string>('');
+
+  const handleSchemaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setJsonSchema(e.target.value);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <FormGenerator />
+      <h1>Dynamic Form Generator</h1>
+      
+      {/* JSON Schema Input */}
+      <div className="schema-input">
+        <label htmlFor="jsonSchema">Paste your JSON schema here:</label>
+        <textarea
+          id="jsonSchema"
+          value={jsonSchema}
+          onChange={handleSchemaChange}
+          placeholder="Enter a valid JSON schema to see the form preview"
+        ></textarea>
+      </div>
+
+      {/* Form Preview */}
+      {jsonSchema && <FormGenerator jsonSchema={jsonSchema} />}
     </div>
   );
 }

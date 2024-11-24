@@ -1,26 +1,10 @@
-// src/components/hooks/useFormGenerator.ts
+// src/hooks/useFormGenerator.ts
 
 import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { FormSchema, FormData } from '../types/schema'; // Import types
 
-interface FormField {
-  id: string;
-  type: string;
-  label: string;
-  required?: boolean;
-  placeholder?: string;
-  validation?: {
-    pattern?: string;
-    message?: string;
-  };
-  options?: { value: string; label: string }[];
-}
-
-interface FormData {
-  [key: string]: string;
-}
-
-const useFormGenerator = (schema: { fields: FormField[] }) => {
+const useFormGenerator = (schema: FormSchema) => {
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
   const [formData, setFormData] = useState<FormData>({});
 
