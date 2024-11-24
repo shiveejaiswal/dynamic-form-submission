@@ -226,9 +226,4 @@ Here's an example JSON schema that you can use to test the form generation:
 
 ---
 
-## **Conclusion**
-
-Now you have the **Dynamic Form Generator** set up and running on your machine. This application should allow you to generate and validate forms based on dynamic JSON schemas. If you encounter any issues or have further questions, please feel free to open an issue in the [GitHub repository](https://github.com/your-username/dynamic-form-submission-main/issues).
-
 Happy coding!
-```
