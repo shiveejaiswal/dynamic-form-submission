@@ -80,5 +80,3 @@ Follow these steps to set up the project on your local machine:
    ```bash
    npx playwright test
    ```
-
-```
