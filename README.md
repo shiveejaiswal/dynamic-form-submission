@@ -1,6 +1,3 @@
-Here’s an example of the **`README.md`** file content formatted for your GitHub repository:
-
-```markdown
 # **Dynamic Form Generator**
 
 ## **Overview**
@@ -235,7 +232,3 @@ Now you have the **Dynamic Form Generator** set up and running on your machine. 
 
 Happy coding!
 ```
-
----
-
-Make sure to replace `your-username` with your actual GitHub username in the links provided. This README includes all necessary details such as prerequisites, installation steps, deployment instructions, and troubleshooting. It will help other developers set up the project and contribute effectively.
