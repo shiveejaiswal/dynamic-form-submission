@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f5a623;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --header-bg: #2c3e50;
+  --footer-bg: #34495e;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
+
+.app-header {
+  background-color: var(--header-bg);
   color: white;
+  text-align: center;
+  padding: 2rem 0;
+  box-shadow: var(--box-shadow);
 }
 
-.App-link {
-  color: #61dafb;
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.app-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.json-editor-section,
+.form-preview-section {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.json-editor-section h2,
+.form-preview-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Here we modify the input box in the JSON editor section */
+.json-editor-section textarea {
+  width: 100%;
+  /* Full width */
+  height: 400px;
+  /* Increase height for better visibility */
+  padding: 12px 18px;
+  /* Add padding */
+  font-size: 1rem;
+  /* Set font size */
+  background-color: #fff;
+  /* White background */
+  border: 1px solid #ddd;
+  /* Light border */
+  border-radius: 8px;
+  /* Rounded corners */
+  color: #333;
+  /* Text color */
+  box-sizing: border-box;
+  /* Include padding in width/height calculation */
+  resize: vertical;
+  /* Allow vertical resizing */
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #fde8e8;
+  border-radius: var(--border-radius);
+  border-left: 4px solid #e74c3c;
+}
+
+.empty-preview-message {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 2rem;
+  background-color: #f1f3f5;
+  border-radius: var(--border-radius);
+}
+
+.app-footer {
+  background-color: var(--footer-bg);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+@media (min-width: 768px) {
+  .app-main {
+    flex-direction: row;
   }
-  to {
-    transform: rotate(360deg);
+
+  .json-editor-section,
+  .form-preview-section {
+    flex: 1;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --header-bg: #1c2833;
+    --footer-bg: #2c3e50;
+  }
+
+  .json-editor-section,
+  .form-preview-section {
+    background-color: #2a2a2a;
+  }
+
+  .empty-preview-message {
+    background-color: #333;
+    color: #aaa;
+  }
+
+  .error-message {
+    background-color: #442727;
+    color: #ff6b6b;
   }
 }
