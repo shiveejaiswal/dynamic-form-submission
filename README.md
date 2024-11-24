@@ -1,46 +1,84 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dynamic Form Generator
 
-## Available Scripts
+A dynamic form generator that takes a JSON schema and generates a styled, functional form in real-time. The application features a JSON editor and a generated form preview, which updates as the JSON schema is modified.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Installation Instructions](#installation-instructions)
+- [Running the Application](#running-the-application)
+- [Usage](#usage)
+- [Testing](#testing)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation Instructions
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Follow these steps to set up the project on your local machine:
 
-### `npm test`
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/dynamic-form-generator.git
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Navigate to the project folder**:
+   ```bash
+   cd dynamic-form-generator
+   ```
 
-### `npm run build`
+3. **Install the dependencies**:
+   Make sure you have **Node.js** and **npm** installed on your machine. Then, run the following command to install the required packages:
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Start the development server**:
+   After the dependencies are installed, you can start the app by running:
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   The app will run on `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Running the Application
 
-### `npm run eject`
+1. **Start the development environment**:
+   Run the following command to start the application locally:
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. **Open the application**:
+   Open a web browser and go to `http://localhost:3000` to see the form editor in action.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### JSON Schema Editor
+- On the left side of the screen, you can edit the JSON schema that defines the form structure. This includes field types, validation rules, and other form properties.
+- The editor supports syntax highlighting and real-time validation of the JSON content.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Generated Form Preview
+- On the right side, you can see the live preview of the form that is generated based on the JSON schema.
+- The form will automatically update as you modify the JSON schema.
+- Fields like text input, email, select, radio, and textarea are supported, and each field will be rendered accordingly.
 
-## Learn More
+### Features:
+- **Real-time form generation**: The form updates instantly as you modify the JSON.
+- **Responsive layout**: The form is mobile-friendly and adjusts based on the screen size.
+- **Error handling**: Error messages are displayed for invalid JSON or form validation errors.
+- **Form submission**: The form can be submitted, and the form data will be logged to the console.
+- **Loading states**: Loading animations are displayed where appropriate.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Testing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Unit Testing with Jest
+1. **Run the Jest tests**:
+   ```bash
+   npm test
+   ```
+
+### E2E Testing with Playwright
+1. **Run the Playwright tests**:
+   ```bash
+   npx playwright test
+   ```
+
+```
