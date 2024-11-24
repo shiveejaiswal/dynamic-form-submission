@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, FieldValues, FieldError, UseFormRegister } from 'react-hook-form';
 import { FormSchema } from '../../types/schema';
 import TextField from './FormFields/TextField';
 import EmailField from './FormFields/EmailField';
@@ -19,7 +19,7 @@ const FormPreview: React.FC<FormPreviewProps> = ({ schema }) => {
     reset
   } = useForm();
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: FieldValues) => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     console.log('Form submitted:', data);
@@ -28,11 +28,14 @@ const FormPreview: React.FC<FormPreviewProps> = ({ schema }) => {
   };
 
   const renderField = (field: any) => {
+    // Refining the error type for proper passing to form fields
+    const error = errors[field.id] as FieldError | undefined;
+
     const props = {
       key: field.id,
       field,
       register,
-      error: errors[field.id]
+      error
     };
 
     switch (field.type) {
