@@ -41,7 +41,7 @@ Follow these steps to install and run the **Dynamic Form Generator** on your loc
 Clone the project to your local machine using Git. Open the terminal/command prompt and run:
 
 ```bash
-git clone https://github.com/your-username/dynamic-form-submission-main.git
+git clone https://github.com/your-username/dynamic-form-submission.git
 ```
 
 Replace `your-username` with the actual GitHub username of the repository owner.
