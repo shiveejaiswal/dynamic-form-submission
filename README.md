@@ -242,6 +242,6 @@ Here's an example JSON schema that you can use to test the form generation:
     }
   ]
 }
-
+```
 Happy coding!
 ```
