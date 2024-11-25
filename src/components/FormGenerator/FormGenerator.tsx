@@ -1,5 +1,3 @@
-// src/components/FormGenerator/FormGenerator.tsx
-
 import React, { useEffect, useState } from 'react';
 import { FormSchema } from '../../types/schema'; // No need to import FormData anymore
 import useFormGenerator from '../../hooks/useFormGenerator';

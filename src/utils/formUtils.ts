@@ -1,5 +1,3 @@
-// src/utils/formUtils.ts
-
 /**
  * Function to validate if a form field value matches a specific pattern.
  * @param value - The value to be validated.

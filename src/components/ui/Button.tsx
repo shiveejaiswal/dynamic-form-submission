@@ -1,4 +1,3 @@
-    // src/components/FormGenerator/UI/Button.tsx
 
 import React from 'react';
 
